@@ -1,0 +1,20 @@
+{
+  "name": "clock",
+  "version": "1.0.0",
+  "description": "A CSS and Javascript powered clock",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "surge src clock.gordondoskas.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gordon2012/clock.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gordon2012/clock/issues"
+  },
+  "homepage": "https://github.com/gordon2012/clock#readme"
+}
