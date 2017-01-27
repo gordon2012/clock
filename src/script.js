@@ -1,23 +1,20 @@
-console.log('hello, clock');
-
-////////
-// WIP: From codepen -> http://codepen.io/gordon2012/pen/001370332f2ad691dde22c4cc190dcbc
-// Will definately need to grab some css
-//
-
 function updateTime(e) {
   const now = new Date();
 
-  const seconds =  now.getSeconds() == 0 ? 60 : now.getSeconds();
-  const secdeg = (((seconds / 60) * 360) + 90);
+  const seconds =  now.getSeconds();
+  const secDeg = (((seconds / 60) * 360) + 90);
+  document.querySelector('.seconds').style.transform = `rotate(${secDeg}deg)`;
 
-  console.log(seconds, secdeg);
+  const minutes = now.getMinutes();
+  const minDeg = minutes / 60 * 360 + 90;
+  document.querySelector('.minutes').style.transform = `rotate(${minDeg}deg)`;
 
-  document.querySelector('.seconds').style.transform = `rotate(${secdeg}deg)`;
+  const hour = now.getHours();
+  const hourDeg = hour / 24 * 360 + 90;
+  document.querySelector('.hour').style.transform = `rotate(${hourDeg}deg)`;
+
+  // console.log(`${hour}:${minutes}:${seconds} | ${hourDeg} ${minDeg} ${secDeg}`);
 }
 
 updateTime();
 window.setInterval(updateTime, 1000);
-
-//
-////////

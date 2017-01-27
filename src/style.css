@@ -3,39 +3,38 @@ h1 {
 }
 
 .clock {
-    /*background: red;*/
-    
-
-    border: 8px solid black;
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid black;
     border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 16px;
+}
 
-    width: 128px;
-    height: 128px;
-
-    /*margin: 16px auto 0;*/
-    margin: 0 8px 16px 32px
+.clock-face {
+    width: 100%;
+    height: 100%;
+    transform: translateY(-4px);
 }
 
 .hand {
-
+    position: absolute;
+    height: 8px;
+    width: 50%;
+    top: 50%;
+    transform-origin: 100%;
+    transition: all 0.05s;
 }
 
 .seconds {
     background: red;
-    
-    height: 4px;
-    width: 50%;
-
-    margin: 50%;
-
-    transition: 1s;
-    
-
-    
 }
 
-.seconds:hover {
-    transform-origin: 10px;
-    transform: rotate(180deg);
+.minutes {
+    background: green;
+}
 
+.hour {
+    background: blue;
 }
